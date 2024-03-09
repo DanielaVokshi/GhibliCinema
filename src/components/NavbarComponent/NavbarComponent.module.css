@@ -1,0 +1,29 @@
+.navbarStyle{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    align-items: center;
+}
+
+.leftSide{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    align-items: center;
+}
+
+.rightSide{
+  margin-left: 20px;
+  font-size: 20px;
+}
+.searchInput{
+    width: 250px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
