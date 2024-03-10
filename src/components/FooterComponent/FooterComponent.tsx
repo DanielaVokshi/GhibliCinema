@@ -1,16 +1,17 @@
 import { Footer } from "flowbite-react";
 import { Link } from "react-router-dom";
+import styles from './/FooterComponent.module.css'
 
 const FooterComponent = () => {
     return (
-        <Footer container>
-      <Footer.Copyright href="#" by="Flowbite™" year={2024} />
-      <Footer.LinkGroup>
-      <Link to={'home'}>Home</Link>
-        <Link to={'tickets'}>My tickets</Link>
-        <Link to={'likes'}>Likes</Link>
-      </Footer.LinkGroup>
-    </Footer>
+      <Footer container className={styles.footerContainer}>
+        <Footer.Copyright href="#" by="" year={2024} className={styles.footerLinks}/>
+          <div className={styles.linkGroup}>
+            <Link to={'home'} className={styles.footerLinks}>Home</Link>
+            <Link to={'tickets'} className={styles.footerLinks}>My tickets</Link>
+            <Link to={'likes'} className={styles.footerLinks}>Likes</Link>
+          </div>
+      </Footer>
     )
 }
 

@@ -1,0 +1,19 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 70px;
+}
+
+.footerLinks{
+    text-decoration: none;
+    color: black;
+}
+
+.linkGroup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
