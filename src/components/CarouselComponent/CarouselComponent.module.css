@@ -1,0 +1,9 @@
+.carousel-container{
+    max-height: 400px;
+}
+
+.header{
+    text-align: center;
+    font-weight: bolder;
+    color: var(--secondary-color);
+}

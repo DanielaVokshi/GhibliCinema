@@ -3,10 +3,10 @@ import { Card } from "antd"
 const { Meta } = Card;
 
 interface Props {
-    id: string;
-    title: string;
-    image: string;
-    release_date: string;
+    id?: string;
+    title?: string;
+    image?: string;
+    release_date?: string;
 }
 
 const MovieCard:React.FC<Props> = ({

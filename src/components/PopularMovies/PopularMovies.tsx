@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react"
-import { MovieType } from "../../types"
+import { useState, useEffect } from "react";
 import { fetchAllMovies } from "../../api";
+import { MovieType } from "../../types";
 import MovieCard from "../MovieCard/MovieCard";
-import styles from './MoviesList.module.css'
+import styles from './PopularMovies.module.css';
 
-const MoviesList = () => {
-  
+interface Props {
+    title: string;
+}
+
+const PopularMovies:React.FC<Props> = ({title}) => {
+
     const [moviesData, setMoviesData] = useState<MovieType[]>();
 
     useEffect( () => {
@@ -21,10 +25,11 @@ const MoviesList = () => {
     }, [moviesData])
     console.log(moviesData);
     
-
-    return(
-        <div className={styles.movieContainer}>
-            {
+  return (
+    <>
+    <h1 className={styles.header}>{title}</h1>
+    <div className={styles.popularMoviesContainer}>
+         {
                 moviesData?.map((movie) => (
                     <MovieCard key={movie.id} 
                     id={movie.id}
@@ -32,10 +37,11 @@ const MoviesList = () => {
                     image={movie.image}
                     release_date={movie.release_date}
                     />
-                ))
+                )).slice(5,10)
             }
-        </div>
-    )
+    </div>
+    </>
+  )
 }
 
-export default MoviesList
+export default PopularMovies;

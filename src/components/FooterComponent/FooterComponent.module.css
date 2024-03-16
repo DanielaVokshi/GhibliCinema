@@ -8,7 +8,7 @@
 
 .footerLinks{
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
 }
 
 .linkGroup{

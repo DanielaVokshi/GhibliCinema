@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     background-color: black;
-    color: white;
+    color: var(--secondary-color);
     padding: 10px;
     align-items: center;
     height: 70px;
@@ -26,5 +26,14 @@
 
 .link{
     text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.link:hover{
     color: white;
+}
+
+.logo{
+    height: 50px;
+    margin-top: 10px;
 }

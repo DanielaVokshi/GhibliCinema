@@ -1,0 +1,16 @@
+.popularMoviesContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 10px auto;
+    width: 80%;
+}
+
+.popularMoviesContainer:not(:last-child){
+   column-gap: 10px;
+}
+
+.header{
+    text-align: center;
+    font-weight: bolder;
+    color: var(--secondary-color);
+}
