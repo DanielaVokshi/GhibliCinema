@@ -17,3 +17,9 @@
     align-items: center;
     width: 200px;
 }
+
+.footerDivider{
+    color: var(--secondary-color);
+    margin: 0;
+}
+

@@ -9,3 +9,12 @@ export const fetchAllMovies = async ():Promise<MovieType[] | undefined> => {
         console.error(error);
     }
 }
+
+export const fetchSingleMovie = async (id: string|undefined):Promise<MovieType | undefined> => {
+    try{
+        const response = await axios.get(`https://ghibliapi.vercel.app/films/${id}`);
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+}

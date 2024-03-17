@@ -22,8 +22,11 @@ const CarouselComponent = () => {
     }, [moviesData])
     console.log(moviesData);
 
+
+    
     const renderSlides = moviesData?.map((movie) => (
-        <CarouselData image={movie.image}/>
+        
+        <CarouselData image={movie.image} />
     )).slice(0,8)
 
   return (

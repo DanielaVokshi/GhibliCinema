@@ -9,5 +9,5 @@ export type MovieType = {
     release_date: string;
     running_time: string;
     rt_score: string;
-    moviePrice: '700 ALL';
+    moviePrice: string;
 }

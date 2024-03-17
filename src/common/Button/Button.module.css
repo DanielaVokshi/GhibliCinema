@@ -1,0 +1,10 @@
+.button{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    height: 30px;
+}
+
+.button:hover{
+    color: white;
+}
+
