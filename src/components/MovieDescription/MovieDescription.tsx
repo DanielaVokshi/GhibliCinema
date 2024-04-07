@@ -1,5 +1,6 @@
 import Button from "../../common/Button/Button";
 import LikeButton from "../../common/LikeButton/LikeButton";
+import ReserveModal from "../ReserveModal/ReserveModal";
 import styles from './MovieDescription.module.css'
 
 interface Props {
@@ -16,9 +17,18 @@ interface Props {
     moviePrice?: string;
     isLiked?: boolean;
     isReserved?: boolean;
+
 }
 
-const MovieDesciption:React.FC<Props> = (
+export type TicketReservation ={
+  movieId?: string;
+  movieTitle?: string;
+  numTickets: number;
+  seatSelection: string;
+}
+
+
+const MovieDescription:React.FC<Props> = (
     {
         movieTitle,
         movieOriginalTitle,
@@ -32,6 +42,8 @@ const MovieDesciption:React.FC<Props> = (
         moviePrice
     }
 ) => {
+
+
   return (
     <div className={styles.container}>
       <div>
@@ -40,10 +52,13 @@ const MovieDesciption:React.FC<Props> = (
       <div className={styles.movieInfoContainer}>
         <h1 className={styles.movieTitle}>{movieTitle}</h1>
         <p>
-          <span>{movieRunningTime}</span> • <span>{movieRating}</span>
+          <span>{movieRunningTime} minutes</span> • <span>Rating: {movieRating}</span>
         </p>
         <div className={styles.buttons}>
-          <Button label="Reserve Movie" />
+          {/* <Button label="Reserve a ticket" /> */}
+          {/* <ReserveTicket  setTicketReservation={setTicketReservation} /> */}
+          <ReserveModal />
+          <Button label="Buy a ticket"/>
           <LikeButton />
         </div>
         <div>{movieDescription}</div>
@@ -68,4 +83,4 @@ const MovieDesciption:React.FC<Props> = (
   );
 }
 
-export default MovieDesciption
+export default MovieDescription

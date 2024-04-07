@@ -2,6 +2,8 @@
     background-color: var(--secondary-color);
     border-radius: 10px;
     height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .button:hover{

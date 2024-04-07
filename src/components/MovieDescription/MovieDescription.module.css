@@ -18,6 +18,7 @@ height: 180px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-left: 50px;
 }
 
 .buttons{

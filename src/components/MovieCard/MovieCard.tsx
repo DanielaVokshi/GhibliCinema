@@ -1,5 +1,5 @@
 import { Card } from "antd"
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const { Meta } = Card;
 
@@ -19,8 +19,14 @@ const MovieCard:React.FC<Props> = ({
 
   const navigate = useNavigate();
 
+  const clickCard = () => {
+    navigate (`/home/${id}`)
+    navigate(0)
+  }
+
   return (
-    <Card onClick={() => navigate(id)}
+<Card 
+    onClick={clickCard}
     hoverable
     style={{ width: 240 }}
     cover={<img alt="movie" src={image}/>}

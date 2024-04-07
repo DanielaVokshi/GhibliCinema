@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 import FirstPage from './pages/FirstPage.tsx'
 import MovieDetails from './pages/MovieDetails.tsx'
+import MyTickets from './pages/MyTickets.tsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/:id",
         element: <MovieDetails />
+      },
+      {
+        path: "tickets",
+        element: <MyTickets />
       }
     ]
   },

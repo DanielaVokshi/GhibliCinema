@@ -24,6 +24,7 @@ const PopularMovies:React.FC<Props> = ({title}) => {
         }
     }, [moviesData])
     console.log(moviesData);
+
     
   return (
     <>
